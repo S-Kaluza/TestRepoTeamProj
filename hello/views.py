@@ -13,7 +13,7 @@ def api_get_story(request):
     # Zaktualizowana ścieżka docelowa wskazująca na folder 'data'
     file_path = settings.BASE_DIR / 'data' / 'story.json'
 
-    print("hello world")
+    print("hello world222")
 
     
     try:
