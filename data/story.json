@@ -1,0 +1,57 @@
+{
+  "start": {
+    "video_url": "/static/videos/camp_approach.mp4",
+    "choices": [
+      {
+        "text": "Zaatakuj obóz frontalnie",
+        "next": "combat_engagement"
+      },
+      {
+        "text": "Przekradnij się wzdłuż muru",
+        "next": "stealth_approach"
+      }
+    ]
+  },
+  "combat_engagement": {
+    "video_url": "/static/videos/combat_scene.mp4",
+    "choices": [
+      {
+        "text": "Użyj magii obszarowej",
+        "next": "magic_victory"
+      },
+      {
+        "text": "Zarządź odwrót",
+        "next": "retreat_failure"
+      }
+    ]
+  },
+  "stealth_approach": {
+    "video_url": "/static/videos/stealth_scene.mp4",
+    "choices": [
+      {
+        "text": "Obezwładnij strażnika",
+        "next": "stealth_success"
+      },
+      {
+        "text": "Poczekaj, aż przejdzie",
+        "next": "wait_spotted"
+      }
+    ]
+  },
+  "magic_victory": {
+    "video_url": "/static/videos/victory.mp4",
+    "choices": []
+  },
+  "retreat_failure": {
+    "video_url": "/static/videos/game_over.mp4",
+    "choices": []
+  },
+  "stealth_success": {
+    "video_url": "/static/videos/enter_keep.mp4",
+    "choices": []
+  },
+  "wait_spotted": {
+    "video_url": "/static/videos/game_over.mp4",
+    "choices": []
+  }
+}
