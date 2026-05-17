@@ -12,6 +12,8 @@ def api_get_story(request):
     
     # Zaktualizowana ścieżka docelowa wskazująca na folder 'data'
     file_path = settings.BASE_DIR / 'data' / 'story.json'
+
+    print("hello world")
     
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
