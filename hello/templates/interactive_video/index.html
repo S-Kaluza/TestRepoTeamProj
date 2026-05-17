@@ -128,7 +128,6 @@
             const startBtn = document.getElementById("start-btn");
             let storyGraph = {};
 
-            // ŚCIEŻKA ZAKTUALIZOWANA: Dopasowana do Twojego adresu aplikacji (/hello/api/story/)
             fetch("/hello/api/story/")
                 .then(response => {
                     if (!response.ok) throw new Error("Błąd sieci podczas pobierania konfiguracji.");
@@ -161,7 +160,11 @@
                 }
 
                 choicesOverlay.classList.remove("active");
-                player.src = nodeData.video_url;
+                
+                // Cache busting zapobiegający błędowi 304 i zwiechom tagu <video>
+                const cacheBuster = new Date().getTime();
+                player.src = `${nodeData.video_url}?t=${cacheBuster}`;
+                
                 player.play().catch(e => console.error("Błąd odtwarzania:", e));
 
                 choicesOverlay.innerHTML = ""; 
